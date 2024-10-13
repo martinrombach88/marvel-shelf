@@ -11,6 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        iron: {
+        '200': '#ced5d3',
+        },
+        red: {
+          '200': '#ff2732',
+        }
+    
       },
     },
   },
