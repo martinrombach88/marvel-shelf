@@ -13,8 +13,7 @@ export const Button: React.FC<ButtonProps> = ({
     <a
       href="#_"
       className={
-        className +
-        " relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black rounded-full shadow-md group"
+        "relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black rounded-full shadow-md group"
       }
     >
       <span className="absolute inset-0 flex items-center justify-center w-full h-full black duration-300 -translate-x-full bg-red-200 group-hover:translate-x-0 ease">

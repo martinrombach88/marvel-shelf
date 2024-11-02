@@ -23,9 +23,9 @@ const ComicCard = ({
   cover_artist,
 }: ComicCardProps): JSX.Element => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="">
       {/* Example ComicCard component */}
-      <div className="bg-white p-4 rounded-lg shadow-lg border border-gray-200">
+      <div className="bg-white p-4 m-4 rounded-lg shadow-lg border border-gray-200">
         <h3 className="text-lg font-semibold text-yellow-500">{comic_name}</h3>
         <p className="text-sm text-gray-600">Issue: {issue_title}</p>
         <p className="text-sm text-gray-600">
