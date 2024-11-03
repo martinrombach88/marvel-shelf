@@ -5,6 +5,7 @@ import ToggleText from "@/app/components/ToggleText"
 
 import getComics from "@/data-lib/json-lib"
 import Header from "../components/Header"
+import { Comic } from "../lib/definitions"
 
 export default async function SearchComics() {
   const comics = await getComics()
@@ -12,11 +13,8 @@ export default async function SearchComics() {
   return (
     <body>
       <Header />
-      {/* Container for two-column layout */}
       <div className="columns">
-        {/* Left Column: Search Component */}
         <div className="column1">
-          {/* Search Input */}
           <div className="search place-content-center">
             <div className="">
               <ToggleText toggleTitle="Issue Title" />
@@ -35,10 +33,7 @@ export default async function SearchComics() {
 
         {column2 && (
           <div className="column2 overflow-y-scroll snap-y snap-mandatory w-auto place-items-center">
-            {/* Right Column: Comic Cards */}
-            {/* Loop to display multiple ComicCard components */}
-
-            {comics.map((comic, index: number) => (
+            {comics.map((comic: Comic, index: number) => (
               <ComicCard {...comic} key={index} />
             ))}
           </div>

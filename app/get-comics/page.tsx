@@ -5,6 +5,7 @@ import ToggleText from "@/app/components/ToggleText"
 
 import getComics from "@/data-lib/json-lib"
 import Header from "../components/Header"
+import { Comic } from "../lib/definitions"
 
 export default async function GetComics() {
   const comics = await getComics()
@@ -12,17 +13,11 @@ export default async function GetComics() {
   return (
     <body>
       <Header imageWidth="w-60" />
-      {/* Container for two-column layout */}
       <div className="columns mt-10">
-        {/* Left Column: Search Component */}
         <div className="column1">
-          {/* Search Input */}
           {
             <div className="column2 overflow-y-scroll snap-y snap-mandatory w-auto ">
-              {/* Right Column: Comic Cards */}
-              {/* Loop to display multiple ComicCard components */}
-
-              {comics.map((comic, index: number) => (
+              {comics.map((comic: Comic, index: number) => (
                 <ComicCard {...comic} key={index} />
               ))}
             </div>

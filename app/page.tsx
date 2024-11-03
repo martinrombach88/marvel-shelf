@@ -9,10 +9,14 @@ export default async function Home() {
       <Header imageWidth="w-72" />
       <div className="columns">
         <div className="column1">
-          <SiteLink buttonText="Get" url={"/get-comics"} />
-          <SiteLink buttonText="Search" url={"/search-comics"} />
-          <SiteLink buttonText="Update" url={"/"} />
-          <SiteLink buttonText="Delete" url={"/"} />
+          <SiteLink testId="getLink" buttonText="Get" url={"/get-comics"} />
+          <SiteLink
+            testId="searchLink"
+            buttonText="Search"
+            url={"/search-comics"}
+          />
+          <SiteLink testId="updateLink" buttonText="Update" url={"/"} />
+          <SiteLink testId="deleteLink" buttonText="Delete" url={"/"} />
         </div>
       </div>
     </body>

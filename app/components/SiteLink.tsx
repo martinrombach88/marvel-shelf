@@ -5,6 +5,7 @@ interface SiteLinkProps {
   className?: string
   buttonText: string
   format?: string
+  testId: string
 }
 
 const SiteLink: React.FC<SiteLinkProps> = ({
@@ -12,9 +13,11 @@ const SiteLink: React.FC<SiteLinkProps> = ({
   buttonText,
   format = "hover",
   url = "",
+  testId,
 }) => {
   return (
     <Link
+      data-testId={testId}
       href={url}
       className={
         "relative inline-flex items-center justify-center my-4 p-2 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black rounded-full shadow-md group"
