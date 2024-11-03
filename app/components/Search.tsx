@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from "./Button"
+import { Button } from "./SiteLink"
 import ToggleText from "./ToggleText"
 
 export default function Search() {

@@ -1,22 +1,27 @@
-interface ButtonProps {
+import Link from "next/link"
+
+interface SiteLinkProps {
+  url: string
   className?: string
   buttonText: string
   format?: string
 }
 
-export const Button: React.FC<ButtonProps> = ({
+const SiteLink: React.FC<SiteLinkProps> = ({
   className = "",
   buttonText,
   format = "hover",
+  url = "",
 }) => {
   return (
-    <a
-      href="#_"
+    <Link
+      href={url}
       className={
-        "relative inline-flex items-center justify-center p-4 px-6 py-3 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black rounded-full shadow-md group"
+        "relative inline-flex items-center justify-center my-4 p-2 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black rounded-full shadow-md group"
       }
     >
-      <span className="absolute inset-0 flex items-center justify-center w-full h-full black duration-300 -translate-x-full bg-red-200 group-hover:translate-x-0 ease">
+      <span className="absolute inset-0 flex items-center justify-evenly w-full h-full black duration-300 -translate-x-full bg-red-200 group-hover:translate-x-0 ease">
+        {buttonText}
         <svg
           className="w-6 h-6"
           fill="none"
@@ -36,6 +41,8 @@ export const Button: React.FC<ButtonProps> = ({
         {buttonText}
       </span>
       <span className="relative invisible">Button Text</span>
-    </a>
+    </Link>
   )
 }
+
+export default SiteLink
