@@ -1,5 +1,5 @@
 import React from "react"
-import { Button } from "./SiteLink"
+
 import ToggleText from "./ToggleText"
 
 export default function Search() {
@@ -17,8 +17,6 @@ export default function Search() {
         placeholder="Enter your search term"
         className="p-2 m-4 border border-gray-300 rounded-lg focus:outline-none focus:border-red-500"
       />
-
-      <Button buttonText="Search" />
     </div>
   )
 }
