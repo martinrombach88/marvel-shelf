@@ -1,11 +1,11 @@
-import Link from "next/link"
+import Link from "next/link";
 
 interface SiteLinkProps {
-  url: string
-  className?: string
-  buttonText: string
-  format?: string
-  testId: string
+  url: string;
+  className?: string;
+  buttonText: string;
+  format?: string;
+  testId: string;
 }
 
 const SiteLink: React.FC<SiteLinkProps> = ({
@@ -17,7 +17,7 @@ const SiteLink: React.FC<SiteLinkProps> = ({
 }) => {
   return (
     <Link
-      data-testId={testId}
+      // for tests data-testId={testId}
       href={url}
       className={
         "relative inline-flex items-center justify-center my-4 p-2 overflow-hidden font-medium text-black transition duration-300 ease-out border-2 border-black rounded-full shadow-md group"
@@ -45,7 +45,7 @@ const SiteLink: React.FC<SiteLinkProps> = ({
       </span>
       <span className="relative invisible">Button Text</span>
     </Link>
-  )
-}
+  );
+};
 
-export default SiteLink
+export default SiteLink;

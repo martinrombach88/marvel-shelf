@@ -2,10 +2,15 @@ import Link from "next/link";
 import React from "react";
 import Header from "./components/Header";
 import SiteLink from "./components/SiteLink";
+import { comics } from "../placeholder-data/comics";
 
 export default async function Home() {
+  for (let i = 0; i < 10; i++) {
+    console.log(comics[i]);
+  }
+
   return (
-    <body>
+    <>
       <Header imageWidth="w-72" />
       <div className="columns">
         <div className="column1">
@@ -21,6 +26,6 @@ export default async function Home() {
           <SiteLink testId="deleteLink" buttonText="Delete" url={"/"} />*/}
         </div>
       </div>
-    </body>
+    </>
   );
 }
