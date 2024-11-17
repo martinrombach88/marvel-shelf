@@ -5,7 +5,7 @@ interface SiteLinkProps {
   className?: string;
   buttonText: string;
   format?: string;
-  testId: string;
+  testId?: string;
 }
 
 const SiteLink: React.FC<SiteLinkProps> = ({

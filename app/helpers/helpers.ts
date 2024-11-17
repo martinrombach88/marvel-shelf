@@ -1,4 +1,4 @@
-import crypto from "crypto"
+import crypto from "crypto";
 
 export const createHash = (
   timestamp: string,
@@ -14,10 +14,6 @@ export const createHash = (
     .createHash("md5")
     .update(timestamp + publicKey + privateKey)
     .digest("hex");
-};
-
-export const printData = () => {
-  console.log(JSON.stringify(comics));
 };
 
 export const validateTimestamp = (timestamp: string): boolean => {
