@@ -1,15 +1,15 @@
-import React from "react"
-import ComicCard from "../components/ComicCard"
-import SiteLink from "@/app/components/SiteLink"
-import ToggleText from "@/app/components/ToggleText"
+import React from "react";
+import ComicCard from "../components/ComicCard";
+import SiteLink from "@/app/components/SiteLink";
+import ToggleText from "@/app/components/ToggleText";
 
-import getComics from "@/data-lib/json-lib"
-import Header from "../components/Header"
-import { Comic } from "../lib/definitions"
+import getComics from "@/app/controller/sql-server-json";
+import Header from "../components/Header";
+import { comic } from "../lib/definitions";
 
 export default async function SearchComics() {
-  const comics = await getComics()
-  const column2: boolean = true
+  const comics = await getComics();
+  const column2: boolean = true;
   return (
     <body>
       <Header />
@@ -33,12 +33,12 @@ export default async function SearchComics() {
 
         {column2 && (
           <div className="column2 overflow-y-scroll snap-y snap-mandatory w-auto place-items-center">
-            {comics.map((comic: Comic, index: number) => (
+            {comics.map((comic: comic, index: number) => (
               <ComicCard {...comic} key={index} />
             ))}
           </div>
         )}
       </div>
     </body>
-  )
+  );
 }

@@ -1,15 +1,16 @@
-import React from "react"
-import ComicCard from "../components/ComicCard"
-import getComics from "@/data-lib/json-lib"
-import Header from "../components/Header"
-import { comic } from "../lib/definitions"
+import React from "react";
+import ComicCard from "../components/ComicCard";
+import getComics from "@/app/controller/marvel-official-api";
+import Header from "../components/Header";
 
 export default async function GetComics() {
-  const comics = await getComics()
+  //const comics = await getComics();
+  //console.log(comics);
 
   return (
     <body>
       <Header imageWidth="w-60" />
+      {/*
       <div className="columns mt-10">
         <div className="column1">
           {
@@ -20,7 +21,7 @@ export default async function GetComics() {
             </div>
           }
         </div>
-      </div>
+      </div>*/}
     </body>
-  )
+  );
 }
