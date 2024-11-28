@@ -1,0 +1,6 @@
+Project necessities
+
+1. get testing down (test all get functions, then test other functions etc)
+3. add search, test it
+2. explore state management (i.e. add the data to the state), test it
+3. explore generics, test it

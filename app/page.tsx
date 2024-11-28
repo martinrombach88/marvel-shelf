@@ -1,11 +1,11 @@
-import Link from "next/link"
-import React from "react"
-import Header from "./components/Header"
-import SiteLink from "./components/SiteLink"
+import Link from "next/link";
+import React from "react";
+import Header from "./components/Header";
+import SiteLink from "./components/SiteLink";
 
-export default async function Home() {
+export default function Home() {
   return (
-    <body>
+    <>
       <Header imageWidth="w-72" />
       <div className="columns">
         <div className="column1">
@@ -15,10 +15,8 @@ export default async function Home() {
             buttonText="Search"
             url={"/search-comics"}
           />
-          <SiteLink testId="updateLink" buttonText="Update" url={"/"} />
-          <SiteLink testId="deleteLink" buttonText="Delete" url={"/"} />
         </div>
       </div>
-    </body>
-  )
+    </>
+  );
 }
