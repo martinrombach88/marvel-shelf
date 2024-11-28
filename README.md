@@ -1,3 +1,3 @@
 ## Task List -> Test Coverage Exploration
 
-A ChatGPT generated task list project for exploring unit testing.
+A generated template task list project for exploring unit testing.

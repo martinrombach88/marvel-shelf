@@ -1,0 +1,7 @@
+Project necessities
+
+1. test what's there, 100% coverage
+2. explore state management (i.e. add the data to the state), test it
+3. explore generics, test it
+
+If you clean out the marvel stuff you can focus on testing
