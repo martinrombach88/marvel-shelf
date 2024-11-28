@@ -3,9 +3,11 @@ import ComicCard from "../components/ComicCard";
 import SiteLink from "@/app/components/SiteLink";
 import ToggleText from "@/app/components/ToggleText";
 
+
 import getComics from "@/app/controller/sql-server-json";
 import Header from "../components/Header";
 import { comic } from "../lib/definitions";
+
 
 export default async function SearchComics() {
   //use state that filters the comics by whatever filter you add.
@@ -35,7 +37,10 @@ export default async function SearchComics() {
 
         {column2 && (
           <div className="column2 overflow-y-scroll snap-y snap-mandatory w-auto place-items-center">
+
+
             {/*
+
             {comics.map((comic: comic, index: number) => (
               <ComicCard {...comic} key={index} />
             ))} */}
