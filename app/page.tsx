@@ -1,22 +1,12 @@
-import Link from "next/link";
-import React from "react";
-import Header from "./components/Header";
-import SiteLink from "./components/SiteLink";
+import Layout from "./components/Layout"
 
-export default function Home() {
+const Home = () => {
   return (
-    <>
-      <Header imageWidth="w-72" />
-      <div className="columns">
-        <div className="column1">
-          <SiteLink testId="getLink" buttonText="Get" url={"/get-comics"} />
-          <SiteLink
-            testId="searchLink"
-            buttonText="Search"
-            url={"/search-comics"}
-          />
-        </div>
-      </div>
-    </>
-  );
+    <Layout>
+      <h1 className="text-2xl font-bold">Welcome to Task Manager</h1>
+      <p>Manage tasks and users efficiently.</p>
+    </Layout>
+  )
 }
+
+export default Home

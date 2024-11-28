@@ -1,3 +1,3 @@
-## Marvel Shelf
+## Task List -> Test Coverage Exploration
 
-A Next.js / Typescript app built to locally simulate testing in Jest and Playwright on a frontend app.
+A generated template task list project for exploring unit testing.
