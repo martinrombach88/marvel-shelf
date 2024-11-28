@@ -1,4 +1,4 @@
-import { validateEntity } from "../lib/crudUtils"
+import { validateEntity } from "../app/lib/crudUtils"
 
 test("validates entity with custom logic", () => {
   const task = { id: "1", title: "Test Task", description: "" }
