@@ -3,7 +3,7 @@ import Layout from "../components/Layout"
 import TaskCard from "../components/TaskCard"
 import { useAppSelector } from "../hooks/useAppSelector"
 import { useAppDispatch } from "../hooks/useAppDispatch"
-import { fetchTasks } from "../lib/taskUtils"
+import { fetchTasks } from "../lib/taskUtils/taskUtils"
 import { setTasks } from "../store/taskSlice"
 
 const Tasks = () => {
