@@ -1,18 +1,22 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import Layout from "../components/Layout"
 import TaskCard from "../components/TaskCard"
-import { fetchTasks } from "../lib/taskUtils"
+import { useAppSelector } from "../hooks/useAppSelector"
+import { useAppDispatch } from "../hooks/useAppDispatch"
+import { fetchTasks } from "../lib/taskUtils/taskUtils"
+import { setTasks } from "../store/taskSlice"
 
 const Tasks = () => {
-  const [tasks, setTasks] = useState([])
+  const dispatch = useAppDispatch()
+  const tasks = useAppSelector((state: any) => state.tasks.tasks)
 
   useEffect(() => {
     const loadTasks = async () => {
-      const data: any = await fetchTasks()
-      setTasks(data)
+      const data = await fetchTasks()
+      dispatch(setTasks(data))
     }
     loadTasks()
-  }, [])
+  }, [dispatch])
 
   return (
     <Layout>

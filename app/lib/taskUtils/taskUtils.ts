@@ -5,6 +5,9 @@ export const fetchTasks = async () => {
   ]
 }
 
-export const validateTask = (task: { title: string; description: string }) => {
+export const validateTask: any = (task: {
+  title: string
+  description: string
+}) => {
   return task.title.trim().length > 0
 }
